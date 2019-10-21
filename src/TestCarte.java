@@ -18,6 +18,7 @@ public class TestCarte {
 		cap111.add(new Paragraf("Text din subcapitol 1.1.1"));
 		cap111.add(cap1111);
 		cap1111.add(new Imagine("Imagine subcapiol 1.1.1.1"));
+		cap1111.add(new Tabel("testam"));
 //		int indexCapitol = myBook.setCapitol("Capitol unu");
 //		Capitol capitolUnu = myBook.getCapitol(indexCapitol);
 //		int indexSubcapitol = capitolUnu.setSubcapitol("Subcapitol unu");
