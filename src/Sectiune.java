@@ -27,5 +27,15 @@ public class Sectiune implements Element {
 		{
 			listaElemente.get(i).print();
 		}
+		
 	}
+	@Override
+	public void accept(Visitor vis) {
+		for (Element el:listaElemente)
+		{
+			el.accept(vis);
+			
+		}
+	}
+	
 }

@@ -17,4 +17,10 @@ public class Imagine implements Element {
 	public void print() {
 		System.out.println("Imagine: " + nume );
 	}
+	@Override
+	public void accept(Visitor vis) {
+		// TODO Auto-generated method stub
+		vis.visit(this);
+	}
+
 }

@@ -13,4 +13,11 @@ public class ImagineProxy implements Element {
 			this.img.print();
 			
 		}
+		@Override
+		public void accept(Visitor vis) {
+			// TODO Auto-generated method stub
+			vis.visit(this);
+			
+		}
+
 }

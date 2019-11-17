@@ -27,4 +27,9 @@ public class Paragraf implements Element {
 	public void setAlignStrategy(AlignStrategy type) {
 		this.AlignStrategy = type;
 	}
+	@Override
+	public void accept(Visitor vis) {
+		// TODO Auto-generated method stub
+		vis.visit(this);
+	}
 }
