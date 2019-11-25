@@ -1,0 +1,17 @@
+
+public class StatisticsCommand implements Command
+{
+
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		BookStatistic stats = new BookStatistic();
+		DocumentManager doc = DocumentManager.getInstance();
+		Carte c = doc.getBook();
+		Element e = c.getContent(0);
+		e.accept(stats);
+		stats.printStatistics();
+		
+	}
+
+}

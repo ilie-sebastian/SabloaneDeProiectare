@@ -23,10 +23,25 @@ public class TestCarte {
 //		BookCost cost = new BookCost();
 //		cap1.accept(cost);
 //		cost.printStatisticsCost();
+//		System.out.println("JSON Builder");
+//		String filename = "E:\\Informatica anul 3\\Design Patterns\\Laboratorul 1\\src\\book.json";
+//		Builder jsonBuilder = new JSONBuilder(filename);
+//		jsonBuilder.build();
+//		Element myBook = jsonBuilder.getResult();
+//		myBook.print();
+		
+//		System.out.println("XML Builder");
+////		String filename2 = "E:\\Informatica anul 3\\Design Patterns\\Laboratorul 1\\src\\book2.xml";
+//		String filename2 = "E:\\Informatica anul 3\\Design Patterns\\Laboratorul 1\\src\\book2.xml";
+//		Builder xmlBuilder = new XMLBuilder(filename2);
+//		xmlBuilder.build();
+//		Element myBook2 = xmlBuilder.getResult();
+//		myBook2.print();  
 		String filename = "E:\\Informatica anul 3\\Design Patterns\\Laboratorul 1\\src\\book.json";
-		Builder jsonBuilder = new JSONBuilder(filename);
-		jsonBuilder.build();
-		Element myBook = jsonBuilder.getResult();
-		myBook.print();
+		Command cmd1 = new OpenCommand(filename);
+		cmd1.execute();
+		Command cmd2 = new StatisticsCommand();
+		cmd2.execute();
+		DocumentManager.getInstance().getBook().print();
 	}
 }

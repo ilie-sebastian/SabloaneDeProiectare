@@ -6,5 +6,12 @@
 	<classpathentry kind="lib" path="lib/jackson-annotations-2.8.0.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-core-2.8.1.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-databind-2.8.4.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-core-2.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-databind-2.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-dataformat-xml-2.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-module-jaxb-annotations-2.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/stax2-api-3.1.4.jar"/>
+	<classpathentry kind="lib" path="lib/woodstox-core-5.0.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

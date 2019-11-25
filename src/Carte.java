@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Carte {
+	
 	private String nume;
 	private ArrayList<Autor> listaAutori = new ArrayList<Autor>();
 	private ArrayList<Element> listaElemente = new ArrayList<Element>();
@@ -29,6 +30,10 @@ public class Carte {
 		{
 			listaElemente.get(i).print();
 		}
+	}
+	public Element getContent(int index)
+	{
+		return this.listaElemente.get(index);
 	}
 
 
