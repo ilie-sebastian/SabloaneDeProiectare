@@ -2,6 +2,8 @@
 public class DocumentManager {
 	private static DocumentManager doc;
 	private Carte book;
+	private Observer firstObserver = new FirstObserver();
+	private Observer secondObserver = new SecondObserver();
 	private DocumentManager() {
 		
 	}
@@ -18,6 +20,16 @@ public class DocumentManager {
 	public void setBook(Carte book) {
 		this.book = book;
 	}
+	public Observer getFirstOberver()
+	{
+		return this.firstObserver;
+	}
+	public Observer getSecondOberver()
+	{
+		return this.secondObserver;
+	}
+			
+			
 	
 	
 }

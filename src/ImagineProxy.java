@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class ImagineProxy implements Element {
 		private String nume;
@@ -19,5 +20,9 @@ public class ImagineProxy implements Element {
 			vis.visit(this);
 			
 		}
-
+		@Override
+		public void setNewValue(String newValue) {
+			// TODO Auto-generated method stub
+			
+		}
 }
