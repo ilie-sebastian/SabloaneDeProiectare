@@ -19,6 +19,10 @@ public class Imagine implements Element,Observable {
 			e.printStackTrace();
 			}
 	}
+	public Imagine copy()
+	{
+		return new Imagine(this.nume);
+	}
 	public void print() {
 		System.out.println("Imagine: " + nume );
 	}

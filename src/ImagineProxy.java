@@ -25,4 +25,9 @@ public class ImagineProxy implements Element {
 			// TODO Auto-generated method stub
 			
 		}
+		@Override
+		public Element copy() {
+			// TODO Auto-generated method stub
+			return null;
+		}
 }

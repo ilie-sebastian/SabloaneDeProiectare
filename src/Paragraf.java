@@ -16,6 +16,10 @@ public class Paragraf implements Element,Observable {
 		addObserver(DocumentManager.getInstance().getFirstOberver());
 		addObserver(DocumentManager.getInstance().getSecondOberver());
 	}
+	public Paragraf copy()
+	{
+		return new Paragraf(this.nume);
+	}
 	public void print() {
 		if(this.AlignStrategy !=null)
 		{

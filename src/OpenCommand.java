@@ -15,5 +15,10 @@ public class OpenCommand implements Command{
 		c.addContent(myBook);
 		DocumentManager.getInstance().setBook(c);
 	}
+	@Override
+	public void unexecute() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

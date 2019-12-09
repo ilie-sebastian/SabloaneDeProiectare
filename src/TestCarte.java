@@ -43,23 +43,46 @@ public class TestCarte {
 //		Command cmd2 = new StatisticsCommand();
 //		cmd2.execute();
 //		DocumentManager.getInstance().getBook().print();
+//		Sectiune cap1 = new Sectiune("Capitolul 1");
+//		Paragraf p1 = new Paragraf("Paragraf 1");
+//		cap1.add(p1);
+//		Paragraf p2 = new Paragraf("Paragraf 2");
+//		cap1.add(p2);
+//		Paragraf p3 = new Paragraf("Paragraf 3");
+//		cap1.add(p3);
+//		Paragraf p4 = new Paragraf("Paragraf 4");
+//		cap1.add(p4);
+//		cap1.add(new ImagineProxy("ImageOne"));
+//		cap1.add(new Imagine("ImageTwo"));
+//		cap1.add(new Paragraf("Some text"));
+//		cap1.add(new Tabel("Table 1"));
+//		
+//		cap1.setNewValue("CHAPTER 1");
+//		p1.setNewValue("PARAGRAPH 2");
+//		p2.setNewValue("PARAGRAPH 3");
+//		cap1.setNewValue("CHAPTER 1.1");
 		Sectiune cap1 = new Sectiune("Capitolul 1");
-		Paragraf p1 = new Paragraf("Paragraf 1");
-		cap1.add(p1);
-		Paragraf p2 = new Paragraf("Paragraf 2");
-		cap1.add(p2);
-		Paragraf p3 = new Paragraf("Paragraf 3");
-		cap1.add(p3);
-		Paragraf p4 = new Paragraf("Paragraf 4");
-		cap1.add(p4);
-		cap1.add(new ImagineProxy("ImageOne"));
-		cap1.add(new Imagine("ImageTwo"));
-		cap1.add(new Paragraf("Some text"));
-		cap1.add(new Tabel("Table 1"));
+		cap1.add(new Paragraf("Moto capitol"));
+		cap1.add(new Paragraf("Another One"));
+		cap1.add(new Paragraf("Another Two"));
+		cap1.add(new Paragraf("Another Three"));
 		
-		cap1.setNewValue("CHAPTER 1");
-		p1.setNewValue("PARAGRAPH 2");
-		p2.setNewValue("PARAGRAPH 3");
-		cap1.setNewValue("CHAPTER 1.1");
+		DocumentManager.getInstance().setSectiune(cap1);
+		System.out.println("Book Content: ");
+		DocumentManager.getInstance().getSectiune().print();
+
+		new DeleteCommand().execute();
+		System.out.println("Book Content after the first delete: ");
+		DocumentManager.getInstance().getSectiune().print();
+		new DeleteCommand().execute();
+		System.out.println("Book Content after the second delete: ");
+		DocumentManager.getInstance().getSectiune().print();
+		Command undoCommand = new UndoCommand();
+		undoCommand.execute();
+		System.out.println("Book Content after first undo: ");
+		DocumentManager.getInstance().getSectiune().print();
+		undoCommand.execute();
+		System.out.println("Book Content after second undo: ");
+		DocumentManager.getInstance().getSectiune().print();
 	}
 }

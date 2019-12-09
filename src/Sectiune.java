@@ -13,6 +13,7 @@ public class Sectiune implements Element,Observable {
 		addObserver(DocumentManager.getInstance().getFirstOberver());
 		addObserver(DocumentManager.getInstance().getSecondOberver());
 	}
+
 	public int add(Element e)
 	{
 		this.listaElemente.add(e);
@@ -24,6 +25,17 @@ public class Sectiune implements Element,Observable {
 	public Element getElement(int index)
 	{
 		return this.listaElemente.get(index);
+	}
+	public Element getLastElement()
+	{
+		if(this.listaElemente.size() > 0)
+		{
+			return this.listaElemente.get(this.listaElemente.size() -1 );
+		}
+		else
+		{
+			return null;
+		}
 	}
 	public void print() {
 		System.out.println("Titlu:"+ titlu);
@@ -68,6 +80,17 @@ public class Sectiune implements Element,Observable {
 		this.titlu = newValue;
 		notifyObservers();
 		
+	}
+	@Override
+	public Element copy() {
+		// TODO Auto-generated method stub
+		Sectiune s = new Sectiune(this.titlu);
+		
+	
+		 this.listaElemente.forEach(p -> {
+			 s.add(p.copy());
+		 });
+		return s;
 	}
 	
 }

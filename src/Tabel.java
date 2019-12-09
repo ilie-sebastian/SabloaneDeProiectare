@@ -12,6 +12,10 @@ public class Tabel implements Element,Observable {
 		addObserver(DocumentManager.getInstance().getFirstOberver());
 		addObserver(DocumentManager.getInstance().getSecondOberver());
 	}
+	public Tabel copy()
+	{
+		return new Tabel(this.nume);
+	}
 	public void print() {
 		System.out.println("Tabel: "+ nume);
 	}
